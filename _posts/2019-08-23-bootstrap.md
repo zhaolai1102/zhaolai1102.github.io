@@ -17,7 +17,7 @@ tags:                             #标签,可以有多个
 
 
 
-## 		使用bootstrap
+## 使用bootstrap
 
 ```
 <!DOCTYPE html>
@@ -47,18 +47,17 @@ tags:                             #标签,可以有多个
 `<div class="container">`
 
 1. container
-
-   用于固定宽度并支持响应式布局的容器。
+用于固定宽度并支持响应式布局的容器。
 
 2. container-fluid
 
    用于 100% 宽度，占据全部视口（viewport）的容器。
 
-## 网格系统
+# 网格系统
 
 基于一个12列的布局,响应式的,列会根据屏幕大小自动重新排列
 
-### 网格类别
+## 网格类别
 
 1. col- 针对所有设备
 
@@ -67,7 +66,7 @@ tags:                             #标签,可以有多个
 4. col-lg- 大桌面显示器 - 屏幕宽度等于或大于 992px
 5. col-xl- 超大桌面显示器 - 屏幕宽度等于或大于 1200px
 
-### 网格规则
+## 网格规则
 
 1. 网格每一行需要放在设置了 .container (固定宽度) 或 .container-fluid (全屏宽度) 类的容器中，这样就可以自动设置一些外边距与内边距。
 2. 使用行来创建水平的列组。
@@ -78,7 +77,7 @@ tags:                             #标签,可以有多个
 7. Bootstrap 3 和 Bootstrap 4 最大的区别在于 Bootstrap 4 现在使用 flexbox（弹性盒子） 而不是浮动。
 8. Flexbox 的一大优势是，没有指定宽度的网格列将自动设置为等宽与等高列 。 如果您想了解有关Flexbox的更多信息，可以阅读我们的CSS Flexbox教程。
 
-### 自动创建等宽列
+## 自动创建等宽列
 
 不指定数字就会根据数量自动平分
 
@@ -94,7 +93,7 @@ tags:                             #标签,可以有多个
 </div>
 ```
 
-### 响应列
+## 响应列
 
 如果屏幕小到一定程度就会变成一列
 
@@ -109,7 +108,7 @@ tags:                             #标签,可以有多个
 </div>
 ```
 
-### 不等宽
+## 不等宽
 
 一行为12列,如果超出那么会被放到第二行,不要大于12
 
@@ -124,42 +123,42 @@ tags:                             #标签,可以有多个
 </div>
 ```
 
-### 自动调整
+## 自动调整
 
 根据当前分辨率的不同进行调整
 
 ```
- <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-3 col-md-6 col-lg-4 col-xl-2 bg-success">col-1</div>
-      <div class="col-sm-9 col-md-6 col-lg-8 col-xl-10 bg-warning">col-2</div>
-    </div>
-  </div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-3 col-md-6 col-lg-4 col-xl-2 bg-success">col-1</div>
+		<div class="col-sm-9 col-md-6 col-lg-8 col-xl-10 bg-warning">col-2</div>
+	</div>
+</div>
 ```
 
-### 偏移列
+## 偏移列
 
 根据 offset-md-X 右移X个格
 
 ```
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-4 bg-success">.col-md-4</div>
-      <div class="col-md-4 offset-md-4 bg-warning">.col-md-4 .offset-md-4</div>
-    </div>
-    <div class="row">
-      <div class="col-md-3 offset-md-3 bg-success">.col-md-3 .offset-md-3</div>
-      <div class="col-md-3 offset-md-3 bg-warning">.col-md-3 .offset-md-3</div>
-    </div>
-    <div class="row">
-      <div class="col-md-6 offset-md-3 bg-success">.col-md-6 .offset-md-3</div>
-    </div>
-  </div> 
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4 bg-success">.col-md-4</div>
+		<div class="col-md-4 offset-md-4 bg-warning">.col-md-4 .offset-md-4</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 offset-md-3 bg-success">.col-md-3 .offset-md-3</div>
+		<div class="col-md-3 offset-md-3 bg-warning">.col-md-3 .offset-md-3</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 offset-md-3 bg-success">.col-md-6 .offset-md-3</div>
+	</div>
+</div> 
 ```
 
-## 排版
+# 排版
 
-### 默认设置
+## 默认设置
 
 1. Bootstrap4 默认的 font-size 为 16px, line-height 为 1.5。
 
@@ -167,18 +166,19 @@ tags:                             #标签,可以有多个
 
 3. 此外，所有的 **<p>** 元素 margin-top: 0 、 margin-bottom: 1rem (16px)。
 
-4. ```
-   <p class="text-muted">柔和的文本。</p>
-     <p class="text-primary">重要的文本。</p> 						蓝色
-     <p class="text-success">执行成功的文本。</p>					绿色
-     <p class="text-info">代表一些提示信息的文本。</p>			浅蓝色
-     <p class="text-warning">警告文本。</p>								黄色
-     <p class="text-danger">危险操作文本。</p>						红色
-     <p class="text-secondary">副标题。</p>							
-     <p class="text-dark">深灰色文字。</p>
-     <p class="text-light">浅灰色文本（白色背景上看不清楚）。</p>
-     <p class="text-white">白色文本（白色背景上看不清楚）。</p>
-   ```
+4. 颜色
+```
+<p class="text-muted">柔和的文本。</p>
+<p class="text-primary">重要的文本。</p> 						蓝色
+<p class="text-success">执行成功的文本。</p>					绿色
+<p class="text-info">代表一些提示信息的文本。</p>			浅蓝色
+<p class="text-warning">警告文本。</p>								黄色
+<p class="text-danger">危险操作文本。</p>						红色
+<p class="text-secondary">副标题。</p>							
+<p class="text-dark">深灰色文字。</p>
+<p class="text-light">浅灰色文本（白色背景上看不清楚）。</p>
+<p class="text-white">白色文本（白色背景上看不清楚）。</p>
+```
 
 5. h1~h6的大小依次为40px,32px,28px,24px,20px,16px,其中16px=1rem
 

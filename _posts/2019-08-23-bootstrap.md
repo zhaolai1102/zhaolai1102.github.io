@@ -50,23 +50,21 @@ tags:                             #标签,可以有多个
 用于固定宽度并支持响应式布局的容器。
 
 2. container-fluid
+用于 100% 宽度，占据全部视口（viewport）的容器。
 
-   用于 100% 宽度，占据全部视口（viewport）的容器。
-
-# 网格系统
+## 网格系统
 
 基于一个12列的布局,响应式的,列会根据屏幕大小自动重新排列
 
-## 网格类别
+#### 网格类别
 
 1. col- 针对所有设备
-
 2. col-sm- 平板 - 屏幕宽度等于或大于 576px
 3. col-md- 桌面显示器 - 屏幕宽度等于或大于 768px
 4. col-lg- 大桌面显示器 - 屏幕宽度等于或大于 992px
 5. col-xl- 超大桌面显示器 - 屏幕宽度等于或大于 1200px
 
-## 网格规则
+#### 网格规则
 
 1. 网格每一行需要放在设置了 .container (固定宽度) 或 .container-fluid (全屏宽度) 类的容器中，这样就可以自动设置一些外边距与内边距。
 2. 使用行来创建水平的列组。
@@ -77,53 +75,53 @@ tags:                             #标签,可以有多个
 7. Bootstrap 3 和 Bootstrap 4 最大的区别在于 Bootstrap 4 现在使用 flexbox（弹性盒子） 而不是浮动。
 8. Flexbox 的一大优势是，没有指定宽度的网格列将自动设置为等宽与等高列 。 如果您想了解有关Flexbox的更多信息，可以阅读我们的CSS Flexbox教程。
 
-## 自动创建等宽列
+#### 自动创建等宽列
 
 不指定数字就会根据数量自动平分
 
 ```
 <div class="container-fluid" style="background-color:red;">
-  <h1>Hello World!</h1>
-  <div class="row">
-    <div class="col" style="background-color:lavender;">.col</div>
-    <div class="col" style="background-color:orange;">.col</div>
-    <div class="col" style="background-color:lavender;">.col</div>
-    <div class="col" style="background-color:orange;">.col</div>
-  </div>
+	<h1>Hello World!</h1>
+	<div class="row">
+		<div class="col" style="background-color:lavender;">.col</div>
+		<div class="col" style="background-color:orange;">.col</div>
+		<div class="col" style="background-color:lavender;">.col</div>
+		<div class="col" style="background-color:orange;">.col</div>
+	</div>
 </div>
 ```
 
-## 响应列
+#### 响应列
 
 如果屏幕小到一定程度就会变成一列
 
 ```
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-3" style="background-color:lavender;">.col-sm-3</div>
-    <div class="col-sm-3" style="background-color:lavenderblush;">.col-sm-3</div>
-    <div class="col-sm-3" style="background-color:lavender;">.col-sm-3</div>
-    <div class="col-sm-3" style="background-color:lavenderblush;">.col-sm-3</div>
-  </div>
+	<div class="row">
+		<div class="col-sm-3" style="background-color:lavender;">.col-sm-3</div>
+		<div class="col-sm-3" style="background-color:lavenderblush;">.col-sm-3</div>
+		<div class="col-sm-3" style="background-color:lavender;">.col-sm-3</div>
+		<div class="col-sm-3" style="background-color:lavenderblush;">.col-sm-3</div>
+	</div>
 </div>
 ```
 
-## 不等宽
+#### 不等宽
 
 一行为12列,如果超出那么会被放到第二行,不要大于12
 
 ```
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-2" style="background-color:lavender;">.col-sm-3</div>
-    <div class="col-sm-3" style="background-color:lavenderblush;">.col-sm-3</div>
-    <div class="col-sm-4" style="background-color:lavender;">.col-sm-3</div>
-    <div class="col-sm-9" style="background-color:lavenderblush;">.col-sm-3</div>
-  </div>
+	<div class="row">
+		<div class="col-sm-2" style="background-color:lavender;">.col-sm-3</div>
+		<div class="col-sm-3" style="background-color:lavenderblush;">.col-sm-3</div>
+		<div class="col-sm-4" style="background-color:lavender;">.col-sm-3</div>
+		<div class="col-sm-9" style="background-color:lavenderblush;">.col-sm-3</div>
+	</div>
 </div>
 ```
 
-## 自动调整
+#### 自动调整
 
 根据当前分辨率的不同进行调整
 
@@ -136,7 +134,7 @@ tags:                             #标签,可以有多个
 </div>
 ```
 
-## 偏移列
+#### 偏移列
 
 根据 offset-md-X 右移X个格
 
@@ -156,9 +154,9 @@ tags:                             #标签,可以有多个
 </div> 
 ```
 
-# 排版
+## 排版
 
-## 默认设置
+#### 默认设置
 
 1. Bootstrap4 默认的 font-size 为 16px, line-height 为 1.5。
 
@@ -166,6 +164,27 @@ tags:                             #标签,可以有多个
 
 3. 此外，所有的 **<p>** 元素 margin-top: 0 、 margin-bottom: 1rem (16px)。
 
+4. h1~h6的大小依次为40px,32px,28px,24px,20px,16px,其中16px=1rem
+
+5. 还有更大的 `<h1 class="display-1">`到 `<h1 class="display-4">`,其中1最大
+
+6. `<h1><small></small></h1>`用于写一些相对小和细的文字
+
+7. `<p><mark></mark></p>`拥有黄色背景和内边距
+
+8. `<p><abbr></abbr></p>`拥有虚线下划线
+
+9. `<blockquote class="blockquote">`用于引用的内容`<footer class="blockquote-footer"></footer>`用于引用的位置
+
+10. 描述列表
+```
+<dl>
+	<dt>Coffee</dt>
+	<dd>- black hot drink</dd>
+</dl>
+```
+
+11. 计算机代码`<p><code></code></p>`
 4. 颜色
 ```
 <p class="text-muted">柔和的文本。</p>
@@ -179,35 +198,11 @@ tags:                             #标签,可以有多个
 <p class="text-light">浅灰色文本（白色背景上看不清楚）。</p>
 <p class="text-white">白色文本（白色背景上看不清楚）。</p>
 ```
+12. 键盘输入的内容`<kbd></kbd>`
 
-5. h1~h6的大小依次为40px,32px,28px,24px,20px,16px,其中16px=1rem
+13. 格式化文本`<pre></pre>`
 
-6. 还有更大的 `<h1 class="display-1">`到 `<h1 class="display-4">`,其中1最大
-
-7. `<h1><small></small></h1>`用于写一些相对小和细的文字
-
-8. `<p><mark></mark></p>`拥有黄色背景和内边距
-
-9. `<p><abbr></abbr></p>`拥有虚线下划线
-
-10. `<blockquote class="blockquote">`用于引用的内容`<footer class="blockquote-footer"></footer>`用于引用的位置
-
-11. 描述列表
-
-    ```
-      <dl>
-        <dt>Coffee</dt>
-        <dd>- black hot drink</dd>
-    </dl>
-    ```
-
-12. 计算机代码`<p><code></code></p>`
-
-13. 键盘输入的内容`<kbd></kbd>`
-
-14. 格式化文本`<pre></pre>`
-
-### 其他
+#### 其他
 
 | **类名**            | **描述**                                                     |
 | ------------------- | ------------------------------------------------------------ |
@@ -230,38 +225,34 @@ tags:                             #标签,可以有多个
 | .list-inline        | 将所有列表项放置同一行                                       |
 | .pre-scrollable     | 使 <pre> 元素可滚动，代码块区域最大高度为340px,一旦超出这个高度,就会在Y轴出现滚动条 |
 
-## 颜色
-
-### 颜色类
+#### 颜色
 
 用于文本,包括链接等
 
 ```
-  <p class="text-muted">柔和的文本。</p>
-  <p class="text-primary">重要的文本。</p> 						蓝色
-  <p class="text-success">执行成功的文本。</p>					绿色
-  <p class="text-info">代表一些提示信息的文本。</p>			浅蓝色
-  <p class="text-warning">警告文本。</p>								黄色
-  <p class="text-danger">危险操作文本。</p>						红色
-  <p class="text-secondary">副标题。</p>							
-  <p class="text-dark">深灰色文字。</p>
-  <p class="text-light">浅灰色文本（白色背景上看不清楚）。</p>
-  <p class="text-white">白色文本（白色背景上看不清楚）。</p>
+<p class="text-muted">柔和的文本。</p>
+<p class="text-primary">重要的文本。</p> 						蓝色
+<p class="text-success">执行成功的文本。</p>					绿色
+<p class="text-info">代表一些提示信息的文本。</p>			浅蓝色
+<p class="text-warning">警告文本。</p>								黄色
+<p class="text-danger">危险操作文本。</p>						红色
+<p class="text-secondary">副标题。</p>							
+<p class="text-dark">深灰色文字。</p>
+<p class="text-light">浅灰色文本（白色背景上看不清楚）。</p>
+<p class="text-white">白色文本（白色背景上看不清楚）。</p>
 ```
-
-### 背景颜色类
 
 背景不会自动改变文本的颜色,需要单独设置
 
 ```
-  <p class="bg-primary text-white">重要的背景颜色。</p>					蓝色
-  <p class="bg-success text-white">执行成功背景颜色。</p>			绿色
-  <p class="bg-info text-white">信息提示背景颜色。</p>					浅蓝
-  <p class="bg-warning text-white">警告背景颜色</p>						黄色
-  <p class="bg-danger text-white">危险背景颜色。</p>						红色
-  <p class="bg-secondary text-white">副标题背景颜色。</p>
-  <p class="bg-dark text-white">深灰背景颜色。</p>
-  <p class="bg-light text-dark">浅灰背景颜色。</p>
+<p class="bg-primary text-white">重要的背景颜色。</p>					蓝色
+<p class="bg-success text-white">执行成功背景颜色。</p>			绿色
+<p class="bg-info text-white">信息提示背景颜色。</p>					浅蓝
+<p class="bg-warning text-white">警告背景颜色</p>						黄色
+<p class="bg-danger text-white">危险背景颜色。</p>						红色
+<p class="bg-secondary text-white">副标题背景颜色。</p>
+<p class="bg-dark text-white">深灰背景颜色。</p>
+<p class="bg-light text-dark">浅灰背景颜色。</p>
 ```
 
 ## 表格
@@ -282,36 +273,36 @@ tags:                             #标签,可以有多个
 
 ## 图片
 
-### 图片形状
+#### 图片形状
 
 1. `<img src="图片地址" class="img-rounded">`圆角
 2. `<img src="图片地址" class="img-circle">`椭圆
 3. `<img src="图片地址" class="img-thumbnail">`图片缩略图,含有一个边框
 
-### 响应式图片
+#### 响应式图片
 
 根据窗口大小自动调整图片大小
 
 `<img src = "图片地址" class="img-fluid">`
 
-## 大屏幕
+#### 大屏幕
 
 1. 局部
 
-   `<div class="jumbotron">`
+`<div class="jumbotron">`
 
-   增加标题大小,添加更多的页边距
+增加标题大小,添加更多的页边距
 
 2. 全屏
 
-   ```
+```
 <body>
 	<div class="jumbotron jumbotron-fluid">
 		<div class="container">
 		</div>
 	</div>
 </body>
-   ```
+```
 
 ## 提示框
 
@@ -321,132 +312,129 @@ tags:                             #标签,可以有多个
 
 3. 对div添加alert-dismissable类,添加按钮进行关闭操作
 
-   ```
-   <div class="alert alert-light alert-dismissable">
-   <button type="button" class="close" data-dismiss="alert">&times;</button>
-   ```
+```
+<div class="alert alert-light alert-dismissable">
+<button type="button" class="close" data-dismiss="alert">&times;</button>
+```
    
 4. 动画,fade隐藏 show展示  加一起就提供淡出淡入功能
 
-   `<div class="alert alert-success alert-dismissable fade show">`
+`<div class="alert alert-success alert-dismissable fade show">`
 
 ## 按钮
 
 1. 类型
 
-   可以使用`<a></a>,<button></button>,<input>`
+可以使用`<a></a>,<button></button>,<input>`
 
-   ```
+```
 <a href="#" class="btn" role="button">链接按钮</a>
 <button type="button" class="btn">按钮</button>
 <input type="button" class="btn" value="输入框按钮">
 <input type="submit" class="btn" value="提交按钮">
-   ```
+```
 
 2. 背景颜色
 
-   `class="btn btn-link"`链接无背景颜色,只有字体颜色,其他的词和背景颜色一致
+`class="btn btn-link"`链接无背景颜色,只有字体颜色,其他的词和背景颜色一致
 
 3. 只保留边框
 
-   `class="btn btn-outline-dark"`
+`class="btn btn-outline-dark"`
 
 4. 按钮大小
 
-   `class="btn btn-lg"`大按钮
+`class="btn btn-lg"`大按钮
 
-   `class="btn"`普通按钮
+`class="btn"`普通按钮
 
-   `class="btn btn-sm"`小按钮
+`class="btn btn-sm"`小按钮
 
 5. 块级按钮
 
-   `class="btn btn-block"`
+`class="btn btn-block"`
 
 6. 激活禁用
 
-   激活的意思是颜色为鼠标点上去的颜色
+激活的意思是颜色为鼠标点上去的颜色
 
-   1. 对于button和input
+1. 对于button和input
 
-      激活`class="btn active"`
+激活`class="btn active"`
 
-      禁用`class="btn" disabled`
+禁用`class="btn" disabled`
 
-   2. 对于a标签
+2. 对于a标签
 
-      激活`class="btn active"`
-
-      激活`class="btn disabled"`
+激活`class="btn active"`
+激活`class="btn disabled"`
 
 ## 按钮组
 
 1. 基本格式
 
-   `  <div class="btn-group">`,数个按钮连在一起
-   
-   ```
-     <div class="btn-group">
-       <button type="button" class="btn btn-primary">Apple</button>
-       <button type="button" class="btn btn-primary">Samsung</button>
-       <button type="button" class="btn btn-primary">Sony</button>
-     </div>
-   ```
+` <div class="btn-group">`,数个按钮连在一起
+```
+<div class="btn-group">
+	<button type="button" class="btn btn-primary">Apple</button>
+	<button type="button" class="btn btn-primary">Samsung</button>
+	<button type="button" class="btn btn-primary">Sony</button>
+</div>
+```
    
 2. 按钮大小
 
-   `  <div class="btn-group btn-group-lg">`大按钮
+`  <div class="btn-group btn-group-lg">`大按钮
+`  <div class="btn-group btn-group-sm">`小按钮
 
-   `  <div class="btn-group btn-group-sm">`小按钮
-
-   `  <div class="btn-group btn-group-xs">`默认按钮大小和没写没啥区别
+`  <div class="btn-group btn-group-xs">`默认按钮大小和没写没啥区别
 
 3. 垂直按钮组
 
-   `<div class="btn-group-vertical">`
+`<div class="btn-group-vertical">`
 
 4. 下拉菜单
 
-   `class="btn dropdown-toggle" data-toggle="dropdown"`
+`class="btn dropdown-toggle" data-toggle="dropdown"`
 
-   ```
-   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">name</button>
-   <div class="dropdown-menu">
-   	<a class="dropdown-item" href="#">name1</a>
-   	<button type="botton" class="btn dropdown-item btn-primary">name2</button>
-   </div>
-   ```
+```
+<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">name</button>
+	<div class="dropdown-menu">
+		<a class="dropdown-item" href="#">name1</a>
+		<button type="botton" class="btn dropdown-item btn-primary">name2</button>
+	</div>
+```
 
 5. 拆分下拉菜单
 
-   按钮和菜单分离
+按钮和菜单分离
 
-   ```
-     <div class="btn-group">
-       <button type="button" class="btn btn-primary">Sony</button>
-       <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">      创建一个空白按钮用于下拉菜单
-         <span class="caret"></span>
-       </button>
-       <div class="dropdown-menu">
-         <a class="dropdown-item" href="#">Tablet</a>
-         <a class="dropdown-item" href="#">Smartphone</a>
-       </div>
-     </div>
-   ```
+```
+<div class="btn-group">
+	<button type="button" class="btn btn-primary">Sony</button>
+	<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">      创建一个空白按钮用于下拉菜单
+		<span class="caret"></span>
+	</button>
+	<div class="dropdown-menu">
+		<a class="dropdown-item" href="#">Tablet</a>
+		<a class="dropdown-item" href="#">Smartphone</a>
+	</div>
+</div>
+```
 
 ## 徽章
 
 1. 凸显内容,会根据父类的大小变化
 
-   `<span class="badge">New</span>`
+`<span class="badge">New</span>`
 
 2. 颜色,必须设置颜色
 
-   `<span class="badge badge-dark">New</span>`
+`<span class="badge badge-dark">New</span>`
 
 3. 胶囊形状
 
-   `<span class="badge badge-pill badge-dark">`
+`<span class="badge badge-pill badge-dark">`
 
 4. 可以插入其他元素中,如botton
 
@@ -454,90 +442,90 @@ tags:                             #标签,可以有多个
 
 1. 显示百分比
 
-   ```
-   <div class="progress">
-   	<div class="progress-bar" style="width:70%">这里可以插入文本,如70%</div>
-   </div>
-   ```
+```
+<div class="progress">
+	<div class="progress-bar" style="width:70%">这里可以插入文本,如70%</div>
+</div>
+```
 
 2. 高度设置
 
-   默认16px,`<div class="progress-bar" style="width:70%; height:20px"></div>`
+默认16px,`<div class="progress-bar" style="width:70%; height:20px"></div>`
 
 3. 颜色
 
-   `<div class="progress-bar bg-success" style="width:70%"></div>`
+`<div class="progress-bar bg-success" style="width:70%"></div>`
 
-   默认是蓝色success绿色info蓝色warning黄色danger红色	
+默认是蓝色success绿色info蓝色warning黄色danger红色	
 
 4. 条纹
 
-   `<div class="progress-bar bg-success progress-bar-striped" style="width:70%"></div>`
+`<div class="progress-bar bg-success progress-bar-striped" style="width:70%"></div>`
 
-   默认蓝色,success绿色,info浅蓝色
+默认蓝色,success绿色,info浅蓝色
 
 5. 条纹动画
 
-   `<div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:70%"></div>`
+`<div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:70%"></div>`
 
 6. 混合彩色
 
-   一根进度条上有很多段
+一根进度条上有很多段
 
-   ```
-   <div class="progress">
-   	<div class="progress-bar" style="width:70%">这里可以插入文本,如70%</div>
-       <div class="progress-bar" style="width:20%">这里可以插入文本,如70%</div>
-   	<div class="progress-bar" style="width:10%">这里可以插入文本,如70%</div>
-   </div>
-   ```
+```
+<div class="progress">
+	<div class="progress-bar" style="width:70%">这里可以插入文本,如70%</div>
+	<div class="progress-bar" style="width:20%">这里可以插入文本,如70%</div>
+	<div class="progress-bar" style="width:10%">这里可以插入文本,如70%</div>
+</div>
+```
 
 ## 分页
 
 1. 基本结构
 
-   ```
-   <ul class="pagination">
-       <li class="page-item"><a class="page-link" href="#">0</a></li>
-       <li class="page-item"><a class="page-link" href="#">1</a></li>
-   </ul>
-   ```
+```
+<ul class="pagination">
+	<li class="page-item"><a class="page-link" href="#">0</a></li>
+	<li class="page-item"><a class="page-link" href="#">1</a></li>
+</ul>
+```
 
 2. 高亮,变为蓝色
 
-   `<li class="page-item active">`
+`<li class="page-item active">`
 
 3. 不可用的分页链接
 
-   `<li class="page-item disabled">`
+`<li class="page-item disabled">`
 
 4. 大小
 
-   `  <ul class="pagination pagination-lg">`
+`<ul class="pagination pagination-lg">`
 
-   lg大sm小
+lg大sm小
 
 5. a/b/c导航
 
-   ```
-   <ul class="breadcrumb">
-       <li class="breadcrumb-item"><a class="page-link" href="#">0</a></li>
-       <li class="breadcrumb-item"><a class="age-link" href="#">1</a></li>
-       <li class="breadcrumb-item active">2</li>          表示激活需要去掉a标签
-   </ul>
-   ```
+```
+<ul class="breadcrumb">
+	<li class="breadcrumb-item"><a class="page-link" href="#">0</a></li>
+	<li class="breadcrumb-item"><a class="age-link" href="#">1</a></li>
+	<li class="breadcrumb-item active">2</li>          表示激活需要去掉a标签
+</ul>
+```
 
 ## 列表
 
 1. 基本结构
 
-   ```
-     <ul class="list-group">
-       <li class="list-group-item">First item</li>
-       <li class="list-group-item">Second item</li>
-       <li class="list-group-item">Third item</li>
-     </ul>
-   ```
+```
+<ul class="list-group">
+	<li class="list-group-item">First item</li>
+	<li class="list-group-item">Second item</li>
+	<li class="list-group-item">Third item</li>
+</ul>
+```
 
 2. 激活
 
@@ -566,6 +554,7 @@ tags:                             #标签,可以有多个
    `class="list-group-item list-group-item-success"`
 
    颜色同背景颜色
+   
 ## 卡片
 
 1. 基本格式
@@ -772,7 +761,7 @@ tags:                             #标签,可以有多个
 
 商标,导航,其他元素的集合
 
-### 基础导航栏(横向的)
+#### 基础导航栏(横向的)
 
 ```
 <nav class="navbar navbar-expand-sm bg-light">
@@ -794,7 +783,7 @@ tags:                             #标签,可以有多个
 
 3. `<li class="nav-item active">`active是保持激活状态
 
-### 商标
+#### 商标
 
    ```
    <nav class="navbar navbar-expand-sm bg-light">
@@ -807,7 +796,7 @@ tags:                             #标签,可以有多个
    </nav>
    ```
 
-### 折叠导航栏
+#### 折叠导航栏
 
    ```
    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
@@ -831,7 +820,7 @@ tags:                             #标签,可以有多个
    </nav>
    ```
 
-### 下拉菜单
+#### 下拉菜单
 
    ```
    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -850,7 +839,7 @@ tags:                             #标签,可以有多个
    </nav>
    ```
 
-### 表单与按钮
+#### 表单与按钮
 
 ```
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -874,7 +863,7 @@ tags:                             #标签,可以有多个
 </nav>
 ```
 
-### 非链接文本
+#### 非链接文本
 
 ```
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -890,7 +879,7 @@ tags:                             #标签,可以有多个
 </nav>
 ```
 
-### 固定
+#### 固定
 
 将导航栏固定到顶部或者底部
 
@@ -900,7 +889,7 @@ tags:                             #标签,可以有多个
 
 ## 表单
 
-### 堆叠表单
+#### 堆叠表单
 
 竖着排列
 
@@ -923,7 +912,7 @@ tags:                             #标签,可以有多个
 </form>
 ```
 
-### 内联表单
+#### 内联表单
 
 横着排列
 
@@ -944,7 +933,7 @@ tags:                             #标签,可以有多个
 
 ## 表单控件
 
-### 输入input
+#### 输入input
 
 text,password...
 
@@ -957,7 +946,7 @@ text,password...
 </form>
 ```
 
-### 文本textarea
+#### 文本textarea
 
 ```
 <form>
@@ -968,7 +957,7 @@ text,password...
 </form>
 ```
 
-### 复选框checkbox
+#### 复选框checkbox
 
 ```
 <form>
@@ -990,7 +979,7 @@ text,password...
 </form>
 ```
 
-### 单选框radio
+#### 单选框radio
 
 ```
 <form>
@@ -1006,7 +995,7 @@ text,password...
 </form>
 ```
 
-### 下拉菜单select
+#### 下拉菜单select
 
 ```
 <form>
@@ -1139,7 +1128,7 @@ https://www.w3cschool.cn/bootstrap4/bootstrap4-6bi72qoq.html
 
 ## 其他
 
-### 边框
+#### 边框
 
 1. 可以定义边框样式
 
@@ -1158,12 +1147,12 @@ https://www.w3cschool.cn/bootstrap4/bootstrap4-6bi72qoq.html
 
 3. rounded圆角-top -right -bottom -left -circle椭圆 -0无
 
-### 浮动
+#### 浮动
 
 1. 浮动class="float-left"左浮动
 
 2. 响应式浮动`<div class="float-sm-right">`
-### 其他
+#### 其他
 1. 居中对齐`class = "mx-auto"`
 2. 宽度`w-100` ==> 100%
 3. 高度`h-100` ==> 100%

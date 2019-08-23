@@ -1,19 +1,19 @@
 ---
-  layout:     post                  #不要管他
-  title:      从零开始学Bootstrap     #标题
-  subtitle:   bootstrap              #别名,简介,标题下面的那一行字
-  date:       2019-08-23            #发表时间
-  author:     Zhaolai                    #作者
-  header-img: img/post-bg-rwd.jpg   #背景图片
-  catalog: true                     #导航目录,不要管他
-  original: true                    #是否原创申明
-  tags:                             #标签,可以有多个
-      - bootstrap
-      - html
-      - css
-      - js
-      - 前端
-  ---
+layout:     post                  #不要管他
+title:      从零开始学Bootstrap     #标题
+subtitle:   bootstrap              #别名,简介,标题下面的那一行字
+date:       2019-08-23            #发表时间
+author:     Zhaolai                    #作者
+header-img: img/post-bg-rwd.jpg   #背景图片
+catalog: true                     #导航目录,不要管他
+original: true                    #是否原创申明
+tags:                             #标签,可以有多个
+    - bootstrap
+    - html
+    - css
+    - js
+    - 前端
+---
 
 
 

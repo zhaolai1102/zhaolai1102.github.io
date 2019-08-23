@@ -177,6 +177,7 @@ tags:                             #标签,可以有多个
 9. `<blockquote class="blockquote">`用于引用的内容`<footer class="blockquote-footer"></footer>`用于引用的位置
 
 10. 描述列表
+
 ```
 <dl>
 	<dt>Coffee</dt>
@@ -185,7 +186,8 @@ tags:                             #标签,可以有多个
 ```
 
 11. 计算机代码`<p><code></code></p>`
-4. 颜色
+
+12. 颜色
 ```
 <p class="text-muted">柔和的文本。</p>
 <p class="text-primary">重要的文本。</p> 						蓝色
@@ -198,9 +200,9 @@ tags:                             #标签,可以有多个
 <p class="text-light">浅灰色文本（白色背景上看不清楚）。</p>
 <p class="text-white">白色文本（白色背景上看不清楚）。</p>
 ```
-12. 键盘输入的内容`<kbd></kbd>`
+13. 键盘输入的内容`<kbd></kbd>`
 
-13. 格式化文本`<pre></pre>`
+14. 格式化文本`<pre></pre>`
 
 #### 其他
 
@@ -316,7 +318,7 @@ tags:                             #标签,可以有多个
 <div class="alert alert-light alert-dismissable">
 <button type="button" class="close" data-dismiss="alert">&times;</button>
 ```
-   
+
 4. 动画,fade隐藏 show展示  加一起就提供淡出淡入功能
 
 `<div class="alert alert-success alert-dismissable fade show">`
@@ -381,7 +383,7 @@ tags:                             #标签,可以有多个
 	<button type="button" class="btn btn-primary">Sony</button>
 </div>
 ```
-   
+
 2. 按钮大小
 
 `  <div class="btn-group btn-group-lg">`大按钮

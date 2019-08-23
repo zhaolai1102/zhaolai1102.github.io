@@ -188,6 +188,7 @@ tags:                             #标签,可以有多个
 11. 计算机代码`<p><code></code></p>`
 
 12. 颜色
+
 ```
 <p class="text-muted">柔和的文本。</p>
 <p class="text-primary">重要的文本。</p> 						蓝色
@@ -200,6 +201,7 @@ tags:                             #标签,可以有多个
 <p class="text-light">浅灰色文本（白色背景上看不清楚）。</p>
 <p class="text-white">白色文本（白色背景上看不清楚）。</p>
 ```
+
 13. 键盘输入的内容`<kbd></kbd>`
 
 14. 格式化文本`<pre></pre>`
@@ -376,6 +378,7 @@ tags:                             #标签,可以有多个
 1. 基本格式
 
 ` <div class="btn-group">`,数个按钮连在一起
+
 ```
 <div class="btn-group">
 	<button type="button" class="btn btn-primary">Apple</button>
@@ -1154,7 +1157,9 @@ https://www.w3cschool.cn/bootstrap4/bootstrap4-6bi72qoq.html
 1. 浮动class="float-left"左浮动
 
 2. 响应式浮动`<div class="float-sm-right">`
+
 #### 其他
+
 1. 居中对齐`class = "mx-auto"`
 2. 宽度`w-100` ==> 100%
 3. 高度`h-100` ==> 100%

@@ -74,7 +74,8 @@ COMMIT;
 插入查询到的值
 
 ```sql
-INSERT INTO ProductCopy (product_id, product_name, product_type,sale_price, purchase_price, regist_date) SELECT product_id, product_name, product_type, sale_price,
+INSERT INTO ProductCopy (product_id, product_name, product_type,sale_price, purchase_price, regist_date) 
+SELECT product_id, product_name, product_type, sale_price,
 purchase_price, regist_date
 FROM Product;
 ```
@@ -169,7 +170,7 @@ SELECT
 CASE WHEN GROUPING(product_type) = 1 THEN ' 商品种类 合计 ' 
 ELSE product_type END AS product_type,
 CASE WHEN GROUPING(regist_date) = 1 THEN ' 登记日期 合计 '
---数据类型北徐相同,所以将日期转换为字符串格式
+--数据类型必须相同,所以将日期转换为字符串格式
 ELSE CAST(regist_date AS VARCHAR(16)) END AS regist_date,
 SUM(sale_price) AS sum_price
 FROM Product GROUP BY ROLLUP(product_type, regist_date);
@@ -183,7 +184,7 @@ MOD( 被除数,除数 ) 取余
 
 dengdengROUND( 对象数值,保留小数的位数 ) 四舍五入
 
-字符串 1 || 字符串 2 字符串的拼接 concat Mysql; 字符串1 + 字符串2 SQL Server
+`字符串 1 || 字符串 2 `字符串的拼接 concat Mysql; 字符串1 + 字符串2 SQL Server
 
 LENGTH( 字符串 ) 长度
 

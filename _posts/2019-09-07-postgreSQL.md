@@ -2,7 +2,7 @@
 layout:     post                  #不要管他
 title:      从零开始学postgreSQL     #标题
 subtitle:   pgsql              #别名,简介,标题下面的那一行字
-date:       2019-09-04            #发表时间
+date:       2019-09-07            #发表时间
 author:     Zhaolai                    #作者
 header-img: img/post-bg-rwd.jpg   #背景图片
 catalog: true                     #导航目录,不要管他
@@ -148,6 +148,33 @@ END AS abc_product_type
 FROM Product;
 ```
 
+#### 总计
+
+rollup(小计1, 小计2,...) 相当于group(), group(小计1), group(小计1, 小计2)
+
+cube(小计1, 小计2,...) 相当于group(), group(小计1), group(小计2), group(小计1, 小计2), 即所有的可能
+
+GROUPING SETS(小计1, 小计2) 相当于 group(小计1), group(小计2)
+
+```sql
+SELECT product_type, regist_date, SUM(sale_price) AS sum_price
+FROM Product
+GROUP BY ROLLUP(product_type, regist_date);
+```
+
+当使用grouping()时 总计, 小计所产生的null值为1, 其他值为0
+
+```sql
+SELECT 
+CASE WHEN GROUPING(product_type) = 1 THEN ' 商品种类 合计 ' 
+ELSE product_type END AS product_type,
+CASE WHEN GROUPING(regist_date) = 1 THEN ' 登记日期 合计 '
+--数据类型北徐相同,所以将日期转换为字符串格式
+ELSE CAST(regist_date AS VARCHAR(16)) END AS regist_date,
+SUM(sale_price) AS sum_price
+FROM Product GROUP BY ROLLUP(product_type, regist_date);
+```
+
 ## 函数
 
 ABS( 数值 ) 绝对值
@@ -179,8 +206,6 @@ CURRENT_TIMESTAMP 当前日期+时间
 EXTRACT( 日期元素 FROM 日期 ) 获得日期元素 year, month, day, hour, minute, second
 
 CAST (转换前的值 AS 想要转换的数据类型) 数据类型转换
-
-COALESCE( 数据 1,数据 2 ,数据 3...... )
 
 ## 视图
 
@@ -216,9 +241,10 @@ SELECT product_type, cnt_product FROM
 
 生成一个值,用于判断
 
-SELECT product_id, product_name, sale_price FROM Product WHERE sale_price > 
-
-(SELECT AVG(sale_price) FROM Product);
+```sql
+SELECT product_id, product_name, sale_price FROM Product 
+WHERE sale_price > (SELECT AVG(sale_price) FROM Product);
+```
 
 #### 关联子查询
 
@@ -284,7 +310,48 @@ SELECT SP.shop_id, SP.shop_name, SP.product_id, P.product_name
 FROM ShopProduct AS SP CROSS JOIN Product AS P
 ```
 
+## 窗口函数
 
+只能用于select子句中, 不会有汇总功能, 依然有很多行
+
+```sql
+< 窗口函数 > OVER ([ PARTITION BY < 列清单 >]         按什么分组, 如果省略, 意味着将所有的值分为一组
+ORDER BY < 排序用列清单 >)											按什么排序
+```
+
+#### rank
+
+ 用于记录排序编号
+
+rank: 1114
+
+DENSE_RANK: 1112
+
+ROW_NUMBER: 1234
+
+这样的结果不一定会按照order by的顺序进行排序, 需要在from Product后重新声明order by
+
+```sql
+SELECT product_name, product_type, sale_price,
+RANK () OVER ( PARTITION BY product_type ORDER BY sale_price ) 
+AS ranking
+FROM Product;
+```
+
+#### 框架
+
+选定3行计算平均值
+
+之前的使用preceding, 之后的使用following, 同时使用之前之后用
+
+`ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING`
+
+```sql
+SELECT product_id, product_name, sale_price,
+AVG (sale_price) OVER (ORDER BY product_id
+ROWS 2 PRECEDING) AS moving_avg
+FROM Product;
+```
 
 ## 注意事项
 
@@ -387,3 +454,24 @@ from Product;
 from Product as P1 left outer join ShopProduct as P2  
 
 on P2.Product_id = P1.Product_id;
+
+8.1 
+
+SELECT product_id, product_name, sale_price, 
+
+MAX (sale_price) OVER (ORDER BY product_id) AS current_max_price 
+
+FROM Product;
+
+8.2 
+
+SELECT COALESCE(cast(regist_date as varchar(11)), '') as regist_date
+
+, SUM(sale_price) AS sum_price
+
+FROM Product 
+
+GROUP BY ROLLUP(regist_date) 
+
+order by regist_date;
+

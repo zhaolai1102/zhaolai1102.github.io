@@ -29,6 +29,8 @@ tags:                             #标签,可以有多个
 
 integer 整数
 
+numeric数值
+
 #### 字符
 
 char 定长字符串
@@ -335,9 +337,12 @@ ROW_NUMBER: 1234
 ```sql
 SELECT product_name, product_type, sale_price,
 RANK () OVER ( PARTITION BY product_type ORDER BY sale_price ) 
+-- 如果上面使用了聚合函数进行排序, 那么不能写partition by 需要在from product 后面写group by
 AS ranking
 FROM Product;
 ```
+
+
 
 #### 框架
 

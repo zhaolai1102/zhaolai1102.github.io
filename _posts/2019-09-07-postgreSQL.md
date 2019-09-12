@@ -45,6 +45,11 @@ date 年月日
 
 Oracle 中使用的 DATE 型还包含时分秒
 
+```sql
+where Sage >= to_date('1990-01-01','YYYY-DD-MM') and 
+      Sage < to_date('1991-01-01','YYYY-DD-MM');
+```
+
 ## 表
 
 #### 修改表结构

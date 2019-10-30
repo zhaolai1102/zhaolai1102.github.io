@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>面试题汇总-带答案</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>面试题汇总 - 附答案</h1>
+<hr />
+<blockquote>
+<p>班期：JAVA23期</p>
+<p>时间：2018/11/20</p>
+<p>范围：JavaSE、WEB前端、数据库、高级、框架、业务技术</p>
+</blockquote>
+<hr />
+<p>1：重载与重写有什么区别？</p>
+<pre><code>override（重写）
+
+　　 1.方法名、参数、返回值类型相同。
+　　 2.子类方法不能缩小父类方法的访问权限。
+　　 3.子类方法不能抛出比父类方法更多的异常(但子类方法可以不抛出异常)。
+　　 4.存在于父类和子类之间。
+　　 5.方法被定义为final不能被重写。
+
+　overload（重载）
+
+　　1.参数类型、个数、顺序至少有一个不相同。 
+　　2.不能重载只有返回值不同的方法名。
+　　3.存在于父类和子类、同类中。
+</code></pre>
+
+<p>2：&amp;和&amp;&amp;有什么区别？</p>
+<pre><code>&amp;按位与----a&amp;b是把a和b都转换成二进制数然后再进行与的运算
+            不管前面的条件是否正确，后面都执行
+&amp;&amp;逻辑与---a&amp;&amp;b就是当且仅当两个操作数均为 true时，其结果才为 true；（短路功能）
+        前面条件正确时，才执行后面，不正确时，就不执行，效率高
+</code></pre>
+
+<p>3：HashTable和HashMap有什么区别？</p>
+<pre><code>- HashMap是Hashtable的轻量级实现（非线程安全的实现），他们都完成了Map接口
+- 主要区别在于HashMap允许空（null）键值（key）,由于非线程安全，效率上可能高Hashtable
+- HashMap允许将null作为一个entry的key或者value，而Hashtable不允许
+- 最大的不同是，Hashtable的方法是Synchronize的，而HashMap不是
+</code></pre>
+
+<p>4：用最有效率的方法算出2乘以8等于多少？</p>
+<pre><code>2 &lt;&lt; 3
+</code></pre>
+
+<p>5：final, finally, finalize的区别？</p>
+<pre><code>final—修饰符（关键字）
+    如果一个类被声明为final，意味着它不能再派生出新的子类，不能作为父类被继承。
+    一个类不能既被声明为 abstract的，又被声明为final的
+    被声明为final的方法也同样只能使用，不能重写
+
+finally—异常处理时提供 finally 块来执行操作
+    finally块则是无论异常是否发生，都会执行finally块的内容
+
+finalize—方法名
+    finalize() 方法是在垃圾收集器删除对象之前对这个对象调用的
+    它是在object类中定义的，所有的类都继承了它
+</code></pre>
+
+<p>6：字节流和字符流有什么区别？</p>
+<pre><code>字节流：按字节读写
+字符流：按字符
+
+通常在处理文本时优先使用字符流，其他的用字节流
+字节流在操作时本身不会用到缓冲区（内存），是文件本身直接操作的，而字符流在操作时使用了缓冲区，通过缓冲区再操作文件
+</code></pre>
+
+<p>7：Arraylist和Linkedlist的区别?</p>
+<pre><code>ArrayList、LinkedList、Vector和Stack是List的四个实现类，其中Vector是基于JDK1.0，虽然实现了同步，但是效率低，已经不用了，Stack继承Vector
+
+区别：
+
+    - ArrayList是实现了基于动态数组的数据结构，而LinkedList是基于链表的数据结构
+    - 对于随机访问get和set，ArrayList要优于LinkedList，LinkedList不支持高效的随机访问
+    - ArrayList适合查找，LinkedList适合增删
+</code></pre>
+
+<p>8：接口和抽象类有什么区别？</p>
+<pre><code>抽象类（abstract class）：
+    1：abstract 关键字修饰，并且没有方法体
+    2：抽象类不能直接创建实例
+    3：抽象类只能被继承，一个具体类继承一个抽象类，必须实现所有抽象方法
+
+
+接口（interface）：
+    1：实现接口的一定要实现接口里定义的所有方法
+    2：接口可以实现多重继承
+
+区别：
+    1：抽象类和接口都不能够实例化，但可以定义抽象类和接口类型的引用
+    2：一个类如果继承了某个抽象类或者实现了某个接口都需要对其中的抽象方法全部进行实现，否则该类仍然需要被声明为抽象类
+    3：接口比抽象类更加抽象，因为抽象类中可以定义构造器，可以有抽象方法和具体方法，而接口中不能定义构造器而且其中的方法全部都是抽象方法
+    4：抽象类中的成员可以是private、默认、protected、public的，而接口中的成员全都是public的
+    5：抽象类中可以定义成员变量，而接口中定义的成员变量实际上都是常量。有抽象方法的类必须被声明为抽象类，而抽象类未必要有抽象方法
+</code></pre>
+
+<p>9：String， StringBuffer， StringBuilder 的区别？</p>
+<pre><code>- 运行速度快慢为：StringBuilder &gt; StringBuffer &gt; String
+    - （String为字符串常量，而StringBuilder和StringBuffer均为字符串变量，即String对象一旦创建之后该对象是不可更改的）
+- StringBuilder是线程不安全的，而String、StringBuffer是线程安全的
+</code></pre>
+
+<p>10：转发（forward）和重定向（redirect）的区别？</p>
+<pre><code>1：效率上
+    转发（forward） &gt; 重定向（redirect）
+2：显示上
+    重定向（redirect）：显示新的URL
+    转发（forward）：地址栏不变
+3：数据上
+    转发（forward）：可以共享request里面的数据
+    重定向（redirect）：不能
+4：请求次数
+    重定向（redirect）是两次
+    转发（forward）是一次
+</code></pre>
+
+<p>11：写出JDBC操作数据库的步骤？</p>
+<pre><code>1：加载驱动
+    Class.forName(&quot;oracle.jdbc.driver.OracleDriver&quot;);
+2：创建连接
+    Connection con = DriverManager.getConnection(&quot;jdbc:oracle:thin:@localhost:1521:orcl&quot;, &quot;1111&quot;, &quot;1111&quot;);
+3：创建语句
+    PreparedStatement ps = con.prepareStatement(&quot;select * from user&quot;);
+4：执行语句
+    ResultSet rs = ps.executeQuery();
+5：处理结果
+    while(rs.next()) {
+        rs.get.....（“”）；
+    }
+6：关闭资源
+    finally {
+        if(con != null) {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+</code></pre>
+
+<p>12：TCP和UDP的区别？哪个是三次握手协议？</p>
+<pre><code>TCP稳定性较高，但效率低
+UDP通讯相反，效率较高，但稳定性较差
+</code></pre>
+
+<p>13：创建多线程的方式分别是什么？线程死锁是如何产生的？如何防止线程死锁现象？</p>
+<pre><code>方式：
+    继承Thread、实现 Runnable 接口
+
+产生:
+
+    - 一个资源每次只能被一个进程使用
+    - 一个进程因请求发生阻塞时，依然对已获得的资源保持不放
+    - 进程已经获得资源使用权，但是一直未使用
+    - 同一个进程，频繁的获取资源的优先使用权，一直未释放
+
+防止：
+    加锁顺序（线程按照一定的顺序加锁）
+    加锁时限（线程尝试获取锁的时候加上一定的时限，超过时限则放弃对该锁的请求，并释放自己占有的锁）
+    死锁检测（一般是将所有的锁存放于map对象中，检测map中的锁）
+</code></pre>
+
+<p>14：Session和Cookie有什么区别？</p>
+<pre><code>Cookie存在客户端、session数据放在服务器上
+cookie不是很安全，别人可以分析存放在本地的COOKIE并进行修改
+session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能 
+单个cookie在客户端的限制是3K，就是说一个站点在客户端存放的COOKIE不能大于3K
+</code></pre>
+
+<p>15：GET和POST请求的区别？</p>
+<pre><code>GET：
+    1：从服务器上获取数据，一般使用在查询、读操作接口
+    2：由URL所限制，GET方式传输的数据大小有所限制，传送的数据量不超过2KB
+    3：请求的数据会附加在URL之后，以？分隔URL和传输数据，多个参数用&amp;连接
+    4：安全性差
+
+POST:
+    1：向服务器提交数据,一般处理写业务
+    2：POST方式传送的数据量比较大，一般被默认为没有限制
+    3：安全性高
+    4：请求的数据内容放置在HTML HEADER中
+</code></pre>
+
+<p>16：JSP的常用指令有哪些？</p>
+<pre><code>三个编译指令为：page、include、taglib
+
+七个动作指令为：jsp:forward、jsp:param、jsp:include、jsp:plugin、jsp:useBean、jsp:setProperty、jsp:getProperty
+</code></pre>
+
+<p>17：DI有几种方式、分别是什么，你常用的是哪种方式？</p>
+<pre><code>1：Setter方法
+2：构造器
+3：接口注入
+
+注解实现注入、getter，setter方式注入(常用)
+</code></pre>
+
+<p>18：Mybatis中$和#在xml中取值有什么不同？</p>
+<pre><code>mybatis 为我们提供了两种支持动态 sql 的语法：#{} 以及 ${}
+
+#方式能够很大程度防止sql注入，$方式无法防止Sql注入
+$方式一般用于传入数据库对象，例如传入表名
+＃{}将传入的数据都当成一个字符串，会对自动传入的数据加一个双引号
+一般能用#的就别用$
+</code></pre>
+
+<p>19：Spring常见的注解有哪些？</p>
+<pre><code>@Autowired--自动装配
+@Component--自动支持自动装配
+@Repository--DAO层实现
+@Service--Service层实现
+@Controller--Web层实现
+</code></pre>
+
+<p>20：一个汉字几个字节，一个char类型的变量，能储存一个汉字吗，为什么？</p>
+<pre><code>两个字节，可以存储，前提是汉字必须是Unicode编码
+</code></pre>
+
+<p>21：分别列举Struts2常见的组件、配置标签、返回值类型有哪些？</p>
+<pre><code>组件：
+    strutsParperAndExecuteFilter
+    Action
+    Result
+    Interceptor
+标签：
+    package
+    action
+    result
+    param
+    interceptor
+返回值类型：
+    dispatcher
+    redirect
+    redirectAction
+    stream
+    json
+</code></pre>
+
+<p>22：多线程中run和start方法有什么区别？</p>
+<pre><code>Thread的start才是正在开启线程
+Run只是调用了一个普通方法，并没有启动另一个线程，程序还是会按照顺序执行相应的代码
+Start则表示，重新开启一个线程，不必等待其他线程运行完，只要得到cup就可以运行该线程
+</code></pre>
+
+<p>23：静态变量和实例变量有什么区别？</p>
+<pre><code>静态变量前面要加static，实例变量不用
+实例变量属于对象的属性，必须创建了实例对象，才可以被使用，静态变量不属于某个实例对象，而是属于类，也叫类变量，不用创建任何实例对象就会被使用
+</code></pre>
+
+<p>24：List和Map有什么区别？</p>
+<pre><code>list：
+    - 链表
+    - 有序
+    - 继承Collection(set也是)
+    - 可以有重复的对象值，但是对象下标不能重复
+Map：
+    - key-value
+    - 无序
+    - 键不能有重复的 值可以重复
+</code></pre>
+
+<p>25：==与equals有什么区别？</p>
+<pre><code>==：比较两个数据内存地址是否相同
+equals：比较两个数据值是否一样  
+</code></pre>
+
+<p>26：如何给一张表增加一个字段，写出sql语句？</p>
+<pre><code>alter table 表名 add 字段 类型 NOT NULL Default 0;
+</code></pre>
+
+<p>27：++i与i++的区别？</p>
+<pre><code>++i：先赋值+1，后使用i进行其它运算
+i++：先使用i进行其它运算，后赋值+1
+</code></pre>
+
+<p>28：Integer与int的区别？</p>
+<pre><code>int 是基本数据类型，初值为0
+Integer是int的包装类，初值为null
+
+Integer缓存：注意拆箱和装箱（-128-127之间）
+
+原始类型：boolean，char，byte，short，int，long，float，double
+包装类型：Boolean，Character，Byte，Short，Integer，Long，Float，Double
+</code></pre>
+
+<p>29：分别写出oracle、mysql的分页关键词？</p>
+<pre><code>oracle：rownum关键词、row_number()函数
+mysql：limit 0,5    /    limit 5;
+</code></pre>
+
+<p>30：JSP的内置对象及方法有哪些？</p>
+<pre><code>request表示HttpServletRequest对象。它包含了有关浏览器请求的信息，并且提供了几个用于获取cookie, header, 和session数据的有用的方法。
+
+response表示HttpServletResponse对象，并提供了几个用于设置送回 浏览器的响应的方法（如cookies,头信息等）
+
+out对象是javax.jsp.JspWriter的一个实例，并提供了几个方法使你能用于向浏览器回送输出结果。
+
+pageContext表示一个javax.servlet.jsp.PageContext对象。它是用于方便存取各种范围的名字空间、servlet相关的对象的API，并且包装了通用的servlet相关功能的方法。 session表示一个请求的javax.servlet.http.HttpSession对象。
+
+Session可以存贮用户的状态信息 applicaton 表示一个javax.servlet.ServletContext对象。这有助于查找有关servlet引擎和servlet环境的信息 config表示一个javax.servlet.ServletConfig对象。该对象用于存取servlet实例的初始化参数。
+
+page表示从该页面产生的一个servlet实例
+</code></pre>
+
+<p>31：Hibernate与Mybatis区别？</p>
+<pre><code>1：hibernate的扩展性和移植性比mybatis强
+2：hibernate不需要写sql语句，会自动生成，而mybatis则需要写sql语句
+3：hibernate支持事务、一级缓存、二级缓存、查询缓存等
+4：hibernate自己提供分页功能，mybatis需要配置分页插件
+</code></pre>
+
+<p>32：谈谈Spring AOP的原理？</p>
+<pre><code>OOP（Object Oriented Programming，面向对象编程
+    - 相当于OOP（Object Oriented Programming，面向对象编程）的补充和完善
+    - OOP允许开发者定义纵向的关系，但并不适合定义横向的关系，例如日志功能
+    - 导致了大量代码的重复，而不利于各个模块的重用
+
+AOP称为面向切面编程
+    - 核心关注点和横切关注点(对哪些方法进行拦截，拦截后怎么处理，这些关注点称之为横切关注点)
+    - 切面（aspect）(切面就是对横切关注点的抽象)
+    - 连接点（joinpoint）（Spring只支持方法类型的连接点，所以在Spring中连接点指的就是被拦截到的方法）
+    - 通知（advice）（拦截到连接点之后要执行的代码，通知分为前置、后置、异常、最终、环绕通知五类）
+    - 用于处理系统中分布于各个模块的横切关注点，比如事务管理、权限认证、日志、缓存等等
+    - 实现AOP功能关键是采用代理技术，主要分为静态代理(AspectJ)和动态代理
+    - JDK中采用Proxy类产生动态代理的方式为某个接口生成实现类，如果要为某个类生成子类，则可以用CGLIB(代理的类不是代理接口的时候)
+    - 减少系统的重复代码，降低模块之间的耦合度，并有利于未来的可操作性和可维护性
+</code></pre>
+
+<p>33：谈谈IOC的理解？</p>
+<pre><code>- (Inversion of Control,简称IOC)，即控制反转，是一种设计模式，是spring的核心
+- 所谓控制反转，就是把原先我们代码里面需要实现的对象创建、依赖的代码，反转给容器来帮忙实现,所以需要创建一个容器，同时也需要一种描述，告知容器，这些对象之间的依赖关系
+- DI(依赖注入)是实现IoC的一种方法
+- 可以解决代码耦合，由IOC容器来管理对象的生命周期、依赖关系等。
+- 完成对象的创建和依赖的管理注入
+- 当前比较知名的IOC容器有：Spring、JBoss、EJB等。
+</code></pre>
+
+<p>34：谈谈ORM的理解？</p>
+<pre><code>对象关系映射（Object Relational Mapping，简称ORM）
+
+为了解决面向对象与关系数据库存在的互不匹配的现象的技术
+ORM是通过使用描述对象和数据库之间映射的元数据(元数据一般采用XML格式)，将程序中的对象自动持久化到关系数据库中
+
+Java典型的ORM中间件有:Hibernate,ibatis,speedframework,mybatis
+</code></pre>
+
+<p>35：谈谈你对MVC的理解？</p>
+<pre><code>MVC：是一个框架设计模式，其中M（模型）、V（视图）、C（控制器）
+
+视图：视图向用户显示相关的数据，并接受用户的输入。视图不进行任何业务逻辑处理。如：jsp、html等
+
+模型：表示业务数据和业务处理。属于数据模型，如:entity、jdbc、hibernate、mybatis等
+
+控制器：接收、响应用户请求，servlet、action、controller等
+</code></pre>
+
+<p>36：SSH框架搭建步骤？</p>
+<pre><code>1：Struts2
+    - 导包
+    - 加载struts.xml
+    - 配置web.xml
+        - filter
+2：Struts2+Spring
+    - 导中间包、Spring包
+    - 增加Spring的配置文件Applicationcontext.xml
+    - 配置web.xml
+        - context和监听
+3：Hibernate
+    - 导包
+    - 增加hibernate的配置文件hibernate.hbm.cfg和表的映射文件
+        - 配置数据库的方言和连接、加载映射文件
+4：Hibernate+Spring
+    - 导中间包
+    - 在spring的配置文件中加载hibernate的配置信息
+</code></pre>
+
+<p>37：SSM框架搭建步骤？</p>
+<pre><code>1：Spring
+    - 导包
+    - 增加Spring的配置文件Applicationcontext.xml
+    - 配置web.xml
+2：springMVC
+    - 导包
+    - 增加springMVC的配置文件context-dispatcher.xml
+    - 配置web.xml
+3：mybatis
+    - 导包
+    - 增加mybatis的配置文件mybatis-config.xml
+    - 将mybatis的配置文件在spring和springMVC中进行引用和配置
+</code></pre>
+
+<p>38：如何发布运行SpringBoot项目？</p>
+<pre><code>- 发布jar包形式，使用maven
+- 取消tomcat依赖，发布war包形式
+- 自动化容器
+</code></pre>
+
+<p>39：如果equals方法比较为true，那么它们的Hashcode值一定相同吗？ 如果hashcode相同，那么equals方法比较一定为true吗？</p>
+<pre><code>不一定相同
+一定
+
+重写equals方法时请必须重写hashcode，以保证equals方法相等时两个对象hashcode返回相同的值
+
+总的来说，Java中的集合（Collection）有两类，一类是List，再有一类是Set。 前者集合内的元素是有序的，元素可以重复；后者元素无序，但元素不可重复。
+那么这里就有一个比较严重的问题了：要想保证元素不重复，可两个元素是否重复应该依据什么来判断呢？ 这就是Object.equals方法了。但是，如果每增加一个元素就检查一次，那么当元素很多时，后添加到集合中的元素比较的次数就非常多了。 也就是说，如果集合中现在已经有1000个元素，那么第1001个元素加入集合时，它就要调用1000次equals方法。这显然会大大降低效率。  
+于是，Java采用了哈希表的原理。哈希（Hash）实际上是个人名，由于他提出一哈希算法的概念，所以就以他的名字命名了。 哈希算法也称为散列算法，是将数据依特定算法直接指定到一个地址上
+</code></pre>
+
+<p>40：简述servlet 生命周期？</p>
+<pre><code>通过调用 init () 方法进行初始化
+调用 service() 方法来处理客户端的请求
+通过调用 destroy() 方法终止（结束）
+Servlet 是由 JVM 的垃圾回收器进行垃圾回收的
+</code></pre>
+
+<p>41：Redis支持哪些数据类型的存储？</p>
+<pre><code>string、list、set、zset、hash
+</code></pre>
+
+<p>42：Java如何调用Redis进行数据操作，并列举增删改查操作？</p>
+<pre><code>- 导包
+- Jedis jd = new Jedis(IP);
+- jd.ping();//PONG
+</code></pre>
+
+<p>43：Java如何链接MongoDB，写出逻辑代码？</p>
+<pre><code>导包
+
+//建立连接
+MongoClient mc =  new MongoClient(&quot;192.168.168.220&quot;, 27017);
+MongoDatabase db = mc.getDatabase(&quot;db1&quot;);//数据库名称
+</code></pre>
+
+<p>44：MongoDB的体系逻辑结构，主要有什么组成？</p>
+<pre><code>文档(document)、集合(collection)、数据库(database)
+</code></pre>
+
+<p>45：Redis和MongoDB分别应用于哪些应用场景？</p>
+<pre><code>key-value---Redis
+文档存储-----MongoDB
+</code></pre>
+
+<p><img src="https://i.imgur.com/1NNeFHX.png" /></p>
+<p>46：谈谈SpringMVC运行原理是什么？</p>
+<pre><code>1.客户端请求提交到DispatcherServlet 
+2.由DispatcherServlet控制器查询一个或多个HandlerMapping，找到处理请求的Controller 
+3.DispatcherServlet将请求提交到Controller 
+4.Controller调用业务逻辑处理后，返回ModelAndView 
+5.DispatcherServlet查询一个或多个ViewResoler视图解析器，找到ModelAndView指定的视图 
+6.视图负责将结果显示到客户端 
+
+
+DispatcherServlet是整个Spring MVC的核心。它负责接收HTTP请求组织协调Spring MVC的各个组成部分
+</code></pre>
+
+<p><img src="https://i.imgur.com/BGpO9ZE.png" /></p>
+<p>47：JDK和JRE的关系区别是什么？</p>
+<pre><code>JDK是Java的开发工具，JDK包含JRE
+JRE只是Java程序的运行环境，它最核心的内容就是JVM（Java虚拟机）及核心类库
+</code></pre>
+
+<p>48：Java 中的final关键字有哪些用法？</p>
+<pre><code>1：修饰类：表示该类不能被继承
+2：修饰方法：表示方法不能被重写
+3：修饰变量：表示变量只能一次赋值以后值不能被修改（常量）
+</code></pre>
+
+<p>49：Error和Exception有什么区别？什么时候需要捕获异常，什么时候需要抛出异常？</p>
+<pre><code>1:Error表示系统级的错误和程序不必处理的异常,有可能恢复，但是恢复比较困难的严重问题。
+2：Exception表示需要捕捉或者需要程序进行处理的异常，是一种设计或实现问题；也就是说，它表示如果程序运行正常，从不会发生的情况
+
+异常处理的原则：
+    1：System.out.println是高代价的。调用System.out.println会降低系统吞吐量
+    2：在生产环境中别用异常的printStackTrace()方法。
+    3：如果你不能处理异常，不要捕获该异常
+    4：如果要捕获，应在离异常源近的地方捕获它
+    5：捕获的异常一定要做处理
+    6：可以自定义异常
+    7：就近原则
+</code></pre>
+
+<p>50：下面程序的运行结果是()？</p>
+<pre><code>String str1 = &quot;hello&quot;;
+String str2 = &quot;he&quot; + new String(&quot;llo&quot;);
+System.err.println(str1 == str2);
+
+false
+</code></pre>
+
+<p>51：进程和线程的区别是什么？</p>
+<pre><code>- 进程是资源的分配和调度的一个独立单元，而线程是CPU调度的基本单元
+- 同一个进程中可以包括多个线程
+- 进程结束后它拥有的所有线程都将销毁，而线程的结束不会影响同个进程中的其他线程的结束
+- 线程共享整个进程的资源（寄存器、堆栈、上下文），一个进行至少包括一个线程
+- 进程的创建调用fork或者vfork，而线程的创建调用pthread_create
+- 线程中执行时一般都要进行同步和互斥，因为他们共享同一进程的所有资源
+</code></pre>
+
+<p>52：进程的几种状态分别是什么？</p>
+<pre><code>就绪状态：
+
+    当进程已分配到除CPU以外的所有必要的资源，只要获得处理机便可立即执行，这时的进程状态称为就绪状态
+
+运行状态：
+
+    当进程已获得处理机，其程序正在处理机上执行，此时的进程状态称为运行状态
+
+阻塞状态：
+
+    正在运行的进程，由于等待某个事件发生而无法执行时，便放弃处理机而处于阻塞状态。引起进程阻塞的事件可有多种，例如，等待I/O完成、申请缓冲区不能满足、等待信件(信号)等
+
+
+状态转换：
+
+    就绪→运行：处于就绪状态的进程，当进程调度程序为之分配了处理机后，该进程便由就绪状态转变成运行状态
+
+    运行→就绪：处于运行状态的进程在其运行过程中，因分配给它的一个时间片已用完而不得不让出处理机，于是进程从运行状态转变成就绪状态
+
+    运行→阻塞：正在运行的进程因等待某种事件发生而无法继续运行时，便从运行状态变成阻塞状态
+
+    阻塞→就绪：处于阻塞状态的进程，若其等待的事件已经发生，于是进程由阻塞状态转变为就绪状态
+</code></pre>
+
+<p>53：请说出你所知道的线程同步的方法？</p>
+<pre><code>wait():使一个线程处于等待状态，并且释放所持有的对象的lock。
+sleep():使一个正在运行的线程处于睡眠状态，是一个静态方法，调用此方法要捕捉InterruptedException异常。 
+notify():唤醒一个处于等待状态的线程，注意的是在调用此方法的时候，并不能确切的唤醒某一个等待状态的线程，而是由JVM确定唤醒哪个线程，而且不是按优先级。
+notityAll():唤醒所有处入等待状态的线程，注意并不是给所有唤醒线程一个对象的锁，而是让它们竞争。
+</code></pre>
+
+<p>54：用户在浏览器中输入URL之后，发生了什么？写出请求和响应的流程</p>
+<pre><code>1：域名解析
+2：TCP三次握手
+3：浏览器向服务器发送http请求
+4：浏览器发送请求头信息
+5：服务器处理请求
+6：服务器做出应答
+7：服务器发送应答头信息
+8：服务器发送数据
+9：TCP连接关闭
+</code></pre>
+
+<p>55：响应结果状态码有哪些，并给出中文含义？</p>
+<pre><code>1**：信息性状态码
+2**：成功状态码
+    200：请求正常成功
+    204：指示请求成功但没有返回新信息
+    206：指示服务器已完成对资源的部分 GET 请求
+3**：重定向状态码
+    301：永久性重定向
+    302：临时性重定向
+    304：服务器端允许请求访问资源，但未满足条件
+4**：客户端错误状态码
+    400：请求报文中存在语法错误
+    401：发送的请求需要有通过HTTP认证的认证信息
+    403：对请求资源的访问被服务器拒绝了
+    404：服务器上无法找到请求的资源
+5**：服务器错误状态码
+    500：服务器端在执行请求时发生了错误
+    503：服务器暂时处于超负载或正在进行停机维护，现在无法处理请求
+</code></pre>
+
+<p>56：简述JAVA中I/O和NIO的区别？</p>
+<pre><code>NIO:是一种new IO，其目的是为了实现高速IO的代码，将IO操作并转换为操作系统，属于非阻塞型，java.nio.*，是以块（缓冲区）的形式就行数据的传输
+IO：是以流的方式就行数据的传输，属于阻塞型，影响程序的性能
+
+传统阻塞IO，如果你要read/write( byte[10M])一个10M的文件，一旦调用了read/write( byte[10M])这个方法，就得等10M全部read/write，方法底层才会返回。
+
+非阻塞线程，调用read/write( byte[10M])方法立即返回，当然这并不能代表10M已经read/write完成，你需要检测这个byte[10M]的缓冲区
+
+java BIO：同步并阻塞，服务器实现模式为一个连接一个线程，即客户端有连接请求时服务器端就需要启动一个线程进行处理，如果这个连接不做任何事情会造成不必要的线程开销，当然可以通过线程池机制改善；
+
+java NIO：同步非阻塞，服务器实现模式为一个请求一个线程，NIO多线程对某资源进行IO操作时会先把资源先操作至内存缓冲区。然后询问是否IO操作就绪，是则进行IO操作，否则进行下一步操作，然后不断的轮询是否IO操作就绪，直到iIO操作就绪后进行相关操作
+
+java AIO：异步非阻塞，异步非阻塞，服务器实现模式为一个有效请求一个线程，客户端的I/O请求都是由OS先完成了再通知服务器应用去启动线程进行处理。
+
+BIO和NIO的异同：
+
+    共同点：两者都是同步操作。即必须先进行IO操作后才能进行下一步操作。
+    不同点：BIO多线程对某资源进行IO操作时会出现阻塞，即一个线程进行IO操作完才会通知另外的IO操作线程，必须等待。
+</code></pre>
+
+<p>57：Java支持的数据类型有哪些？什么是自动拆装箱？</p>
+<pre><code>8种基本数据类型：
+
+    byte      8位         取值范围  -2^7 ~ 2^7 -1
+
+    short     16位        取值范围  -2^15 ~ 2^15 - 1
+
+    char      16位        取值范围  0 ~ 2 ^16 - 1
+
+    boolean   位数不明确   取值范围  true false
+
+    int       32位        取值范围  -2^31 ~ 2^31 - 1
+
+    long      64位        取值范围  -2^63 ~ 2^ 63 - 1
+
+    float     32位        取值范围  1.4e-45 ~ 3.40e38
+
+    double    64位        取值范围  4.9e-324 ~ 1.79e308
+
+
+注意：
+
+    需要注意的是，String不是基本数据类型，而是引用类型
+
+
+在jdk1.5中引入了自动拆装箱的新特性，自动拆装箱，是指基本数据类型和引用数据类型之间的自动转换
+
+    基本类型转换成包装类型，称为装箱  
+
+    Integer intObjct = new Integer(2); //装箱 
+    //Integer intObjct = 2 //自动装箱  
+    //自动装箱，如果一个基本类型值出现在需要对象的环境中，会自动装箱  
+
+    如Integer 和 int 可以自动转换； Float和float可以自动转换
+</code></pre>
+
+<p>58：sleep 和 wait 有什么区别？</p>
+<pre><code>sleep：
+    1：属于Thread类，表示让一个线程进入睡眠状态，等待一定的时间之后，自动醒来进入到可运行状态，不会马上进入运行状态
+    2：sleep方法没有释放锁
+    3：sleep必须捕获异常
+
+
+wait：
+    1：属于Object，一旦一个对象调用了wait方法，必须要采用notify()和notifyAll()方法唤醒该进程
+    2：wait方法释放了锁
+    3：wait不需要捕获异常
+</code></pre>
+
+<p>59：同步和异步有何异同，在什么情况下分别使用他们？举例说明。</p>
+<pre><code>如果数据将在线程间共享。
+    例如正在写的数据以后可能被另一个线程读到，或者正在读的数据可能已经被另一个线程写过了，那么这些数据就是共享数据，必须进行同步存取。 
+当应用程序在对象上调用了一个需要花费很长时间来执行的方法，并且不希望让程序等待方法的返回时，就应该使用异步编程，在很多情况下采用异步途径往往更有效率。
+</code></pre>
+
+<p>60：构造器（constructor）是否可被重写（override）?是否可被重载？是否可被继承？</p>
+<pre><code>构造器不能被继承，因此不能重写Override，但可以被重载Overload。
+</code></pre>
+
+<p>61：写出冒泡排序的程序代码？(要求高逼格的代码)</p>
+<pre><code>接口：
+
+import java.util.Comparator;
+
+/**
+ * 排序器接口(策略模式: 将算法封装到具有共同接口的独立的类中使得它们可以相互替换)
+ */
+public interface Sorter {
+
+   /**
+    * 排序
+    * @param list 待排序的数组
+    */
+   public &lt;T extends Comparable&lt;T&gt;&gt; void sort(T[] list);
+
+   /**
+    * 排序
+    * @param list 待排序的数组
+    * @param comp 比较两个对象的比较器
+    */
+   public &lt;T&gt; void sort(T[] list, Comparator&lt;T&gt; comp);
+}
+
+
+
+实现类：
+
+import java.util.Comparator;
+
+/**
+ * 冒泡排序
+ *
+ */
+public class BubbleSorter implements Sorter {
+
+    @Override
+    public &lt;T extends Comparable&lt;T&gt;&gt; void sort(T[] list) {
+        boolean swapped = true;
+        for (int i = 1, len = list.length; i &lt; len &amp;&amp; swapped; ++i) {
+            swapped = false;
+            for (int j = 0; j &lt; len - i; ++j) {
+                if (list[j].compareTo(list[j + 1]) &gt; 0) {
+                    T temp = list[j];
+                    list[j] = list[j + 1];
+                    list[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+        }
+    }
+
+    @Override
+    public &lt;T&gt; void sort(T[] list, Comparator&lt;T&gt; comp) {
+        boolean swapped = true;
+        for (int i = 1, len = list.length; i &lt; len &amp;&amp; swapped; ++i) {
+            swapped = false;
+            for (int j = 0; j &lt; len - i; ++j) {
+                if (comp.compare(list[j], list[j + 1]) &gt; 0) {
+                    T temp = list[j];
+                    list[j] = list[j + 1];
+                    list[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+        }
+    }
+}
+</code></pre>
+
+<p>62：简述单例模式的特征和应用场景，单例模式示例代码？</p>
+<pre><code>单例模式（Singleton），也叫单子模式，是一种常用的软件设计模式。在应用这个模式时，单例对象的类必须保证只有一个实例存在。
+单例模式只允许创建一个对象，因此节省内存，加快对象访问速度
+
+单例模式要素： 
+    a.私有构造方法 
+    b.私有静态引用指向自己实例 
+    c.以自己实例为返回值的公有静态方法 
+
+饿汉式：单例实例在类装载时就构建，急切初始化。（预先加载法） 
+
+    优点 
+        1.线程安全 
+        2.在类加载的同时已经创建好一个静态对象，调用时反应速度快 
+    缺点 
+         资源效率不高，可能getInstance()永远不会执行到，但执行该类的其他静态方法或者加载了该类（class.forName)，那么这个实例仍然初始化 
+
+懒汉式：单例实例在第一次被使用时构建，延迟初始化。 
+
+应用场景：
+
+    - 需要频繁实例化然后销毁的对象
+    - 创建对象时耗时过多或者耗资源过多，但又经常用到的对象
+    - 有状态的工具类对象
+    - 频繁访问数据库或文件的对象
+    - 网站计数器，一般是采用单例模式实现
+    - 由于配置文件一般都是共享资源，即web应用的配置对象的读取，一般采用单例模式来实现。如：spring的配置文件的读取等
+    - 多线程的线程池的设计一般也是采用单例模式
+    - 数据库连接池的设计
+
+饿汉式单例：
+    public class Singleton {
+        private Singleton(){}
+        private static Singleton instance = new Singleton();
+        public static Singleton getInstance(){
+            return instance;
+        }
+    }
+
+
+懒汉式单例：
+    public class Singleton {
+        private static Singleton instance = null;
+        private Singleton() {}
+        public static synchronized Singleton getInstance(){
+            if (instance == null) 
+                instance ＝ new Singleton();
+            return instance;
+        }
+    }
+
+
+实现一个单例有两点注意事项：
+    - 将构造器私有，不允许外界通过构造器创建对象
+    - 通过公开的静态方法向外界返回类的唯一实例
+</code></pre>
+
+<p>63：JSP和Servlet有哪些相同点和不同点，他们之间的联系是什么？</p>
+<pre><code>- jsp本质就是servlet
+- jsp应用于页面显示，servlet应用于逻辑控制
+- setvlet中没有内置对象，jsp中的内置对象都是必须通过HttpServletRequest对象，HttpServletResponse对象及HttpServlet对象得到
+</code></pre>
+
+<p>64：简述synchronized和java.util.concurrent.locks.Lock的异同 ？</p>
+<pre><code>- Lock能完成几乎所有synchronized的功能，并有一些后者不具备的功能，如锁投票、定时锁等候、可中断锁等候等
+- synchronized 是Java内置的关键字，Lock 则是JDK 5中出现的一个包
+- synchronized 同步的代码块可以由JVM自动释放；Lock 需要程序员在finally块中手工释放
+</code></pre>
+
+<p>65：写出将10000个存在重复手机号的号码池去重的JAVA代码？(代码写的时候，手机号可以虚拟10个即可,不需要关联数据库，手机号数组用String[]即可)</p>
+<pre><code>public class DemoPhone1 {
+
+    public static void main(String[] args) {
+        phoneDis();
+        phoneDis2();
+        phoneDis3();
+        phoneDis4();
+        phoneDis5();
+        phoneDis6();
+    }
+
+    public static void phoneDis(){
+        String[] array = {&quot;18310141089&quot;,&quot;18310141089&quot;,&quot;18310141080&quot;,&quot;18310141083&quot;,&quot;18310141089&quot;,&quot;18310141489&quot;};  
+        List&lt;String&gt; result = new ArrayList&lt;String&gt;();  
+        boolean flag;  
+        for(int i=0;i&lt;array.length;i++){  
+            flag = false;  
+            for(int j=0;j&lt;result.size();j++){  
+                if(array[i].equals(result.get(j))){  
+                    flag = true;  
+                    break;  
+                }  
+            }  
+            if(!flag){  
+                result.add(array[i]);  
+            }  
+        }  
+        String[] arrayResult = (String[]) result.toArray(new String[result.size()]);  
+        System.out.println(&quot;方法1：&quot; + Arrays.toString(arrayResult));  
+    }
+
+
+    public static void phoneDis2(){
+        String[] array = {&quot;18310141089&quot;,&quot;18310141089&quot;,&quot;18310141080&quot;,&quot;18310141083&quot;,&quot;18310141089&quot;,&quot;18310141489&quot;};  
+        List&lt;String&gt; list = new ArrayList&lt;String&gt;();  
+        list.add(array[0]);  
+        for(int i=1;i&lt;array.length;i++){  
+            if(list.toString().indexOf(array[i]) == -1){  
+               list.add(array[i]);  
+            }  
+        }  
+        String[] arrayResult = (String[]) list.toArray(new String[list.size()]);  
+        System.out.println(&quot;方法2：&quot; + Arrays.toString(arrayResult));  
+    }
+
+    public static void phoneDis3(){
+        String[] array = {&quot;18310141089&quot;,&quot;18310141089&quot;,&quot;18310141080&quot;,&quot;18310141083&quot;,&quot;18310141089&quot;,&quot;18310141489&quot;};  
+        List&lt;String&gt; list = new ArrayList&lt;String&gt;();  
+        for(int i=0;i&lt;array.length;i++){  
+            for(int j=i+1;j&lt;array.length;j++){  
+                if(array[i] == array[j]){  
+                    j = ++i;  
+                }  
+            }  
+            list.add(array[i]);  
+        }  
+        String[] arrayResult = (String[]) list.toArray(new String[list.size()]);  
+        System.out.println(&quot;方法3：&quot; + Arrays.toString(arrayResult));
+    }
+
+    public static void phoneDis4(){
+        String[] array = {&quot;18310141089&quot;,&quot;18310141089&quot;,&quot;18310141080&quot;,&quot;18310141083&quot;,&quot;18310141089&quot;,&quot;18310141489&quot;};  
+        Arrays.sort(array);  
+        List&lt;String&gt; list = new ArrayList&lt;String&gt;();  
+        list.add(array[0]);  
+        for(int i=1;i&lt;array.length;i++){  
+          if(!array[i].equals(list.get(list.size()-1))){  
+             list.add(array[i]);  
+          }  
+        }  
+       String[] arrayResult = (String[]) list.toArray(new String[list.size()]);  
+       System.out.println(&quot;方法4：&quot; + Arrays.toString(arrayResult));
+    }
+
+    public static void phoneDis5(){
+        String[] array = {&quot;18310141089&quot;,&quot;18310141089&quot;,&quot;18310141080&quot;,&quot;18310141083&quot;,&quot;18310141089&quot;,&quot;18310141489&quot;};  
+        Set&lt;String&gt; set = new HashSet&lt;String&gt;();  
+        for(int i=0;i&lt;array.length;i++){  
+            set.add(array[i]);  
+        }  
+        String[] arrayResult = (String[]) set.toArray(new String[set.size()]);  
+        System.out.println(&quot;方法5：&quot; + Arrays.toString(arrayResult)); 
+    }
+
+    public static void phoneDis6() {
+        String[] array = { &quot;18310141089&quot;, &quot;18310141089&quot;, &quot;18310141080&quot;,&quot;18310141083&quot;, &quot;18310141089&quot;, &quot;18310141489&quot; };
+        SortedSet&lt;String&gt; sset = new TreeSet&lt;String&gt;();
+        for (int i = 0; i &lt; array.length; i++) {
+            sset.add(array[i]);
+        }
+        String[] arrayResult2 = (String[]) sset.toArray(new String[sset.size()]);
+        System.out.println(&quot;方法6：&quot; + Arrays.toString(arrayResult2));
+    }
+}
+</code></pre>
+
+<p>66：什么是java序列化，如何实现java序列化？</p>
+<pre><code>概念：
+    序列化就是一种用来处理对象流的机制，所谓对象流也就是将对象的内容进行流化（将对象转换成二进制）。可以对流化后的对象进行读写操作，也可将流化后的对象传输于网络之间。序列化是为了解决在对对象流进行读写操作时所引发的问题
+
+序列化：把Java对象转换为字节序列的过程。
+反序列化：把字节序列恢复为Java对象的过程。
+
+实现：
+
+    将需要被序列化的类实现Serializable接口
+
+注意：
+
+    被关键字static、transient修饰的变量不能被序列化。在被序列化后，transient修饰的变量会被设为初始值。如int型的是0、对象型的是null.
+</code></pre>
+
+<p>67：在JAVA中，如何跳出当前的多重嵌套循环？</p>
+<pre><code>用break; return 方法
+</code></pre>
+
+<p>68：面向对象的特征有哪些方面？</p>
+<pre><code>- 抽象：
+    抽象就是忽略一个主题中与当前目标无关的那些方面，以便更充分地注意与当前目标有关的方面。抽象并不打算了解全部问题，而只是选择其中的一部分，暂时不用部分细节。抽象包括两个方面，一是过程抽象，二是数据抽象。
+- 继承：
+    继承是一种联结类的层次模型，并且允许和鼓励类的重用，它提供了一种明确表述共性的方法。对象的一个新类可以从现有的类中派生，这个过程称为类继承。新类继承了原始类的特性，新类称为原始类的派生类（子类），而原始类称为新类的基类（父类）。派生类可以从它的基类那里继承方法和实例变量，并且类可以修改或增加新的方法使之更适合特殊的需要。
+- 封装：
+    封装是把过程和数据包围起来，对数据的访问只能通过已定义的界面。面向对象计算始于这个基本概念，即现实世界可以被描绘成一系列完全自治、封装的对象，这些对象通过一个受保护的接口访问其他对象。
+- 多态性：
+    多态性是指允许不同类的对象对同一消息作出响应。多态性包括参数化多态性和包含多态性。多态性语言具有灵活、抽象、行为共享、代码共享的优势，很好的解决了应用程序函数同名问题。
+</code></pre>
+
+<p>69：Collection 和 Collections的区别？</p>
+<pre><code>Collection是集合类的上级接口
+    继承与他的接口主要有Set 和List. 
+Collections是针对集合类的一个帮助类
+    他提供一系列静态方法实现对各种集合的搜索、排序、线程安全化等操作。
+</code></pre>
+
+<p>70：GC原理解析?</p>
+<pre><code>GC是垃圾收集的意思（Gabage Collection）
+内存处理是编程人员容易出现问题的地方，忘记或者错误的内存回收会导致程序或系统的不稳定甚至崩溃，Java提供的GC功能可以自动监测对象是否超过作用域从而达到自动回收内存的目的，Java语言没有提供释放已分配内存的显示操作方法
+</code></pre>
+
+<p>71：如何实现servlet的单线程模式？</p>
+<pre><code>&lt;%@ page isThreadSafe=&quot;false&quot;%&gt;
+</code></pre>
+
+<p>72：Request对象的主要方法？</p>
+<pre><code>setAttribute(String name,Object)：设置名字为name的request的参数值
+getAttribute(String name)：返回由name指定的属性值
+getAttributeNames()：返回request对象所有属性的名字集合，结果是一个枚举的实例
+getCookies()：返回客户端的所有Cookie对象，结果是一个Cookie数组
+getCharacterEncoding()：返回请求中的字符编码方式
+getContentLength()：返回请求的Body的长度
+getHeader(String name)：获得HTTP协议定义的文件头信息
+getHeaders(String name)：返回指定名字的request Header的所有值，结果是一个枚举的实例
+getHeaderNames()：返回所以request Header的名字，结果是一个枚举的实例
+getInputStream()：返回请求的输入流，用于获得请求中的数据 getMethod()：获得客户端向服务器端传送数据的方法
+getParameter(String name)：获得客户端传送给服务器端的有name指定的参数值
+getParameterNames()：获得客户端传送给服务器端的所有参数的名字，结果是一个枚举的实例
+getParameterValues(String name)：获得有name指定的参数的所有值
+getProtocol()：获取客户端向服务器端传送数据所依据的协议名称
+getQueryString()：获得查询字符串
+getRequestURI()：获取发出请求字符串的客户端地址
+getRemoteAddr()：获取客户端的IP地址
+getRemoteHost()：获取客户端的名字
+getSession([Boolean create])：返回和请求相关
+Session getServerName()：获取服务器的名字
+getServletPath()：获取客户端所请求的脚本文件的路径
+getServerPort()：获取服务器的端口号
+removeAttribute(String name)：删除请求中的一个属性
+</code></pre>
+
+<p>73：数据库三范式是什么？</p>
+<pre><code>- 第一范式：列不可再分 
+- 第二范式：行可以唯一区分，主键约束 
+- 第三范式：表的非主属性不能依赖与其他表的非主属性外键约束，且三大范式是一级一级依赖的，第二范式建立在第一范式上，第三范式建立第一第二范式上
+</code></pre>
+
+<p>74：从数据库中随机取50条数据，以mysql为例？</p>
+<pre><code>select * from hj_user order by rand() limit 50
+</code></pre>
+
+<p>75：事务四大特性分别是什么？</p>
+<pre><code>- ACID：
+    - 原子性：要么执行，要么不执行 
+    - 隔离性：所有操作全部执行完以前，其它会话不能看到过程 
+    - 一致性：事务前后，数据总额一致 
+    - 持久性：一旦事务提交，对数据的改变就是永久的
+</code></pre>
+
+<p>76：truncate与 delete区别？</p>
+<pre><code>- TRUNCATE TABLE 在功能上与不带 WHERE 子句的 DELETE 语句相同：二者均删除表中的全部行。但 TRUNCATE TABLE 比 DELETE 速度快，且使用的系统和事务日志资源少。 
+- DELETE 语句每次删除一行，并在事务日志中为所删除的每行记录一项。
+- TRUNCATE TABLE 通过释放存储表数据所用的数据页来删除数据，并且只在事务日志中记录页的释放。 
+    - TRUNCATE、DELETE、DROP 比较：
+        - TRUNCATE TABLE ：删除内容、释放空间但不删除定义。
+        - DELETE TABLE: 删除内容不删除定义，不释放空间。
+        - DROP TABLE ：删除内容和定义，释放空间。
+</code></pre>
+
+<p>77：varchar2、varchar、char有什么区别？</p>
+<pre><code>- Char的长度是固定的，而varchar2的长度是可以变化的
+    比如，存储字符串“abc”对于char(20)，表示你存储的字符将占20个字节，包含17个空，而同样的varchar2（20）只占了3个字节，20只是最大值，当你存储的字符小于20时，按实际长度存储。 
+- char的效率要被varchar2的效率高。 
+- 目前varchar是varchar2的同义词
+    工业标准的varchar类型可以存储空字符串，但是oracle不能这样做，尽管它保留以后这样做的权利。
+    Oracle自己开发了一个数据类型varchar2,这个类型不是一个标准的varchar，他将在数据库中varchar列可以存储空字符串的特性改为存储null值，如果你想有向后兼容的能力，oracle建议使用varchar2而不是varchar
+</code></pre>
+
+<p>78：数据库的数据结果如何去重？</p>
+<pre><code>使用distinct关键字
+</code></pre>
+
+<p>79：mysql如何获取当前系统的时间？</p>
+<pre><code>mysql: select now();
+oracle: select to_char(sysdate, 'yyyy-MM-dd HH24:mi:ss') from dual;
+</code></pre>
+
+<p>80：union和union all有什么不同?</p>
+<pre><code>· UNION在进行表链接后会筛选掉重复的记录，所以在表链接后会对所产生的结果集进行排序运算，删除重复的记录再返回结果。
+  实际大部分应用中是不会产生重复的记录，最常见的是过程表与历史表UNION。 
+
+· UNION ALL只是简单的将两个结果合并后就返回。这样，如果返回的两个结果集中有重复的数据，那么返回的结果集就会包含重复的数据了。
+
+· 从效率上说，UNION ALL 要比UNION快很多，所以，如果可以确认合并的两个结果集中不包含重复的数据的话，那么就使用UNION ALL。
+</code></pre>
+
+<p>81：触发器的作用是什么？</p>
+<pre><code>· 触发器是一种特殊的存储过程，主要是通过事件来触发而被执行的。
+· 它可以强化约束，来维护数据的完整性和一致性。
+· 可在写入数据表前，强制检验或转换数据。
+· 触发器发生错误时，异动的结果会被撤销。
+· 部分数据库管理系统可以针对数据定义语言（DDL）使用触发器，称为DDL触发器。
+· 可依照特定的情况，替换异动的指令 (INSTEAD OF)。
+</code></pre>
+
+<p>82：触发器的限制有哪些？</p>
+<pre><code>· 一个表最多只能有三个触发器，insert、update、delete
+· 每个触发器只能用于一个表
+· 不能对视图、临时表创建触发器
+· Truncate table能删除表，但不能触发触发器
+</code></pre>
+
+<p>83：索引的作用？它的优缺点是什么？</p>
+<pre><code>· 索引就一种特殊的查询表，数据库的搜索可以利用它加速对数据的检索。
+· 它很类似与现实生活中书的目录，不需要查询整本书内容就可以找到想要的数据。
+· 索引可以是唯一的，创建索引允许指定单个列或者是多个列。
+· 缺点是它减慢了数据录入的速度，同时也增加了数据库的尺寸大小。
+</code></pre>
+
+<p>84：什么样的字段适合建索引？</p>
+<pre><code>· 唯一
+· 主、外键
+· 不为空
+· 表之间的关联字段
+· 查询比较频繁的字段
+</code></pre>
+
+<p>85：索引类型有哪些？</p>
+<pre><code>Single column 单行索引
+Concatenated 多行索引
+Unique 唯一索引
+NonUnique 非唯一索引
+Function-based 函数索引
+Domain 域索引 物理上：
+Partitioned 分区索引
+NonPartitioned 非分区索引
+B-tree ：
+Normal 正常型B树
+Rever Key 反转型B树 
+Bitmap 位图索引
+</code></pre>
+
+<p>86：列举几种表连接方式,有什么区别？</p>
+<pre><code>- 内连接、自连接、外连接（左、右、全）、交叉连接 
+    - 内连接：只有两个元素表相匹配的才能在结果集中显示。 
+    - 外连接： 
+        - 左外连接:左边为驱动表，驱动表的数据全部显示，匹配表的不匹配的不会显示。 
+        - 右外连接:右边为驱动表，驱动表的数据全部显示，匹配表的不匹配的不会显示。 
+        - 全外连接：连接的表中不匹配的数据全部会显示出来。 
+    - 交叉连接： 笛卡尔效应，显示的结果是链接表数的乘积。
+</code></pre>
+
+<p>87：什么是存储过程？Java调用存储过程？</p>
+<pre><code>· 存储过程存在于大型数据库系统中，是一个预编译的SQL语句（为了完成特定功能的SQL 语句集），经过第一次编译后再次调用不需要再次编译。
+- 优点是：
+    - 允许模块化的设计，就是说只需创建一次，以后在该程序中就可以调用多次。
+    - 如果某次操作需要执行多次SQL，使用存储过程比单纯SQL语句执行要快。
+    - 减少网络流量。存储过程位于服务器上，调用的时候只需要传递存储过程的名称以及参数就可以了，因此降低了网络传输的数据量。
+    - 安全性。参数化的存储过程可以防止SQL注入式攻击，而且可以将Grant、Deny以及Revoke权限应用于存储过程。
+- 调用： 
+    - 1）可以用一个命令对象来调用存储过程。 
+    - 2）可以供外部程序调用，比如：java程序。
+</code></pre>
+
+<p>88：什么是事务？什么是锁？</p>
+<pre><code>- 事务就是被绑定在一起作为一个逻辑工作单元的SQL语句分组
+  如果任何一个语句操作失败那么整个操作就被失败，以后操作就会回滚到操作前状态，或者是上有个节点。
+  为了确保要么执行，要么不执行，就可以使用事务。
+  要将有组语句作为事务考虑，就需要通过ACID测试：
+  即原子性，一致性，隔离性和持久性。 
+- 锁：锁是实现事务的关键，锁可以保证事务的完整性和并发性。
+     与现实生活中锁一样，它可以使某些数据的拥有者，在某段时间内不能使用某些数据或数据结构。
+     当然锁还分级别的，比如页级锁、行级锁等。
+</code></pre>
+
+<p>89：什么叫视图？游标是什么？</p>
+<pre><code>- 视图：是一种虚拟的表，具有和物理表相同的功能。
+       可以对视图进行增，改，查，操作，试图通常是有一个表或者多个表的行或列的子集。
+       对视图的修改会影响基本表。它使得我们获取数据更容易，相比多表查询。 
+- 游标：是对查询出来的结果集作为一个单元来有效的处理。
+       游标可以定在该单元中的特定行，从结果集的当前行检索一行或多行。
+       可以对结果集当前行做修改。
+       一般不使用游标，但是需要逐条处理数据的时候，游标显得十分重要。
+</code></pre>
+
+<p>90：视图的优缺点？</p>
+<pre><code>- 优点： 
+    - 对数据库的访问，因为视图可以有选择性的选取数据库里的一部分。 
+    - 用户通过简单的查询可以从复杂查询中得到结果。 
+    - 维护数据的独立性，试图可从多个表检索数据。 
+    - 对于相同的数据可产生不同的视图。 
+- 缺点： 
+    - 性能：查询视图时，必须把视图的查询转化成对基本表的查询，如果这个视图是由一个复杂的多表查询所定义，那么，那么就无法更改数据
+</code></pre>
+
+<p>91：主键和外键的区别？</p>
+<pre><code>· 主键在本表中是唯一的、不可唯空的，外键可以重复可以唯空；
+· 外键和另一张表的主键关联，不能创建对应表中不存在的外键。
+</code></pre>
+
+<p>92：order by与group by的区别？</p>
+<pre><code>- order by 排序查询、asc升序、desc降序 
+- group by 分组查询、having 只能用于group by子句、作用于组内。
+    having条件子句可以直接跟函数表达式。
+    使用group by 子句的查询语句需要使用聚合函数。
+</code></pre>
+
+<p>93：在数据库中查询语句速度很慢，如何优化？</p>
+<pre><code>· 建索引 
+· 减少表之间的关联 
+· 优化sql，不要让sql做全表查询
+· 简化查询字段，没用的字段不要，已经对返回结果的控制，尽量返回少量数据 
+· 尽量用PreparedStatement来查询，不要用Statement
+</code></pre>
+
+<p>94：commit在哪里会运用？</p>
+<pre><code>- Oracle的commit就是DML语句提交数据（这里是释放锁不是锁表），在未提交前你前面的操作更新的都是内存，没有更新到物理文件中。 
+- 执行commit从用户角度讲就是更新到物理文件了，事实上commit时还没有写date file，而是记录了redo log file，要从内存写到data物理文件，需要触发检查点，由DBWR这个后台进程来写，这里内容有点多的，如果不深究的话你就理解成commit即为从内存更新到物理文件。
+- insert以后commit之前是锁表的状态，其他事务无法对该表进行操作
+- 如果不提交的话，那么这个表就被锁了 
+</code></pre>
+
+<p>95：InnoDB索引和MyISAM索引的区别？</p>
+<pre><code>· 主索引的区别，InnoDB的数据文件本身就是索引文件。而MyISAM的索引和数据是分开的。 
+· 辅助索引的区别：InnoDB的辅助索引data域存储相应记录主键的值而不是地址。而MyISAM的辅助索引和主索引没有多大区别。
+· MyISAM表锁，不支持事务，表损坏率较高
+· InnoDB行锁，支持事务
+</code></pre>
+
+<p>96：谈一谈数据库优化方面的经验？</p>
+<pre><code>从三方面去回答：
+- 1：数据库设计
+    - 数据库表：字段类型、字段长度、注释、字段命名规范
+    - 数据库索引：外键、关联字段、查询频率比较高的字段、
+            如果数据表字段&gt;20，则最多支持16个索引
+            如果数据表字段&lt;20，则根据查询频率字段来定
+    - 数据库视图：相当于一张临时表，业务中，尽量少使用
+    - 数据库引擎：根据业务，选择对应的表引擎技术
+    - 数据库存储过程：尽量少用
+    - 数据库字符：UTF-8、或者和页面字符保持一致
+    - 数据库监听器/触发器：一般用于调度任务或者备份还原
+- 2：业务调用的sql语句优化
+    - 尽量少关联表，效率最高关联4张表，如果多于4张表，则需要开启两个链接事务，但是这两个事务，必须在一个service当中。
+    - 如果是查询语句，则不建议使用*
+    - 如果是查询语句，where条件后面，最好使用索引字段进行关联
+- 3：数据库服务器的搭建（集群）
+    - 主从配置：
+    - 读写分离：
+    - 自动化（容器）：
+</code></pre>
+
+<h1>结束</h1>
+<hr />
+<h1>推荐码神必备微信公众号 【码神联盟】</h1>
+<h5>长按下方二维码识别关注</h5>
+<p><img src="https://i.imgur.com/es2B0OE.jpg" /></p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

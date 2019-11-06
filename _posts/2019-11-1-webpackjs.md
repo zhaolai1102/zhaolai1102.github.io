@@ -1,5 +1,5 @@
 ---
-	layout:     post                  #不要管他
+layout:     post                  #不要管他
 title:      webpack     #标题
 subtitle:   webpack.js              #别名,简介,标题下面的那一行字
 date:       2019-11-1            #发表时间
